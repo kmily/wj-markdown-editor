@@ -54,7 +54,7 @@ const defaultConfig = {
   auto_save_minute: numberValue(0),
   // 默认显示webdav
   show_web_dav: booleanValue(true),
-  watermark_enabled: booleanValue(true),
+  watermark_enabled: booleanValue(false),
   watermark_export_date: booleanValue(true),
   watermark_export_date_format: stringValue('YYYY-MM-DD'),
   watermark_content: stringValue('wj-markdown-editor'),
