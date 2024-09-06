@@ -15,4 +15,5 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: pwd
+      - run: yarn --cwd ./wj-markdown-editor-web
       - run: yarn --cwd ./wj-markdown-editor-web build
