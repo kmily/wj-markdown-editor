@@ -15,13 +15,13 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: pwd
-      - name: web build
+      ## web build
       - run: yarn --cwd ./wj-markdown-editor-web
       - run: yarn --cwd ./wj-markdown-editor-web build
-      - name: electron make
+      ## electron make
       - run: yarn --cwd ./wj-markdown-editor-electron
       - run: yarn --cwd ./wj-markdown-editor-electron run make
-      - name: print log
+      ## print log
       - run: ls
       - run: ls ./wj-markdown-editor-electron
       - run: ls ./wj-markdown-editor-electron/electron-build
