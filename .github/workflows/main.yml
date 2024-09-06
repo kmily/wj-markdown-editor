@@ -18,6 +18,7 @@ jobs:
       - run: yarn --cwd ./wj-markdown-editor-web
       - run: yarn --cwd ./wj-markdown-editor-web build
       - run: ls
+      - run: ls ./wj-markdown-editor-web
       - name: zip files
         run: zip -r wj-markdown-editor.zip ./dist
       - name: Upload artifact
