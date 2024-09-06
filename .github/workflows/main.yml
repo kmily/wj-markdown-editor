@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ 14, 16, 18 ]
+        node: [18]
     name: Node ${{ matrix.node }} sample
     steps:
       - uses: actions/checkout@v4
@@ -14,6 +14,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-      - run: ls
-      - run: cd ./wj-markdown-editor-web & yarn ci
-      - run: cd ./wj-markdown-editor-web & yarn build
+      - run: pwd
+      - run: yarn --cwd ./wj-markdown-editor-web ci
+      - run: yarn --cwd ./wj-markdown-editor-web build
